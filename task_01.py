@@ -20,11 +20,11 @@ for i in range(1, 100000):
         b = True
     k += 2
 # вычисление количества знаков после запятой(точность)
-if (d<=0.1) and (d>=pow(10,-10)):
+if (d <= 0.1) and (d >= pow(10, -10)):
     accuracy = 1
     while ((d*10) < 1):
-        d=d*10
-        accuracy+=1
+        d = d*10
+        accuracy += 1
     print(round(pi, accuracy))
 else:
     print('Введено неверное значение точности!')
