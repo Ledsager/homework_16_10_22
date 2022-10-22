@@ -14,7 +14,7 @@ from random import randint
 spisok_koef = []
 k_stepen = int(input('Введите степень многочлена: '))
 for i in (range(k_stepen + 1)):
-    rand_num = randint(0, 2)
+    rand_num = randint(0, 100) 
     spisok_koef.append(rand_num)
 
 # spisok_koef=[randint(-10,10) for _ in range(k+1)]
