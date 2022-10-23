@@ -13,8 +13,10 @@ from random import randint
 
 spisok_koef = []
 k_stepen = int(input('Введите степень многочлена: '))
-for i in (range(k_stepen + 1)):
-    rand_num = randint(0, 100) 
+# коэффициент при старшей степени многочлена должен быть больше 0
+spisok_koef.append(randint(1, 2))
+for i in (range(k_stepen)):
+    rand_num = randint(0, 1) 
     spisok_koef.append(rand_num)
 
 # spisok_koef=[randint(-10,10) for _ in range(k+1)]
@@ -46,6 +48,6 @@ if spisok_koef[-1] != 0:
 polynomial = polynomial + '=0'
 
 print('Полученный многочлен : ', polynomial)
-filename = "polinomial.txt"
+filename = "polinom.txt"
 with open(filename, 'w') as file:
     file.write(f'\n{polynomial}')
