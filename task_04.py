@@ -16,14 +16,14 @@ k_stepen = int(input('Введите степень многочлена: '))
 # коэффициент при старшей степени многочлена должен быть больше 0
 spisok_koef.append(randint(1, 100))
 for i in (range(k_stepen)):
-    rand_num = randint(0, 100) 
+    rand_num = randint(0, 100)
     spisok_koef.append(rand_num)
 
 print(spisok_koef)
 polynomial = ''
 for i in range(len(spisok_koef)):
     # for i,koef in enumerate(spisok_koef):
-    print(len(spisok_koef),' ',i)
+    print(len(spisok_koef), ' ', i)
     if len(polynomial) > 0 and spisok_koef[i] > 0:
         polynomial = polynomial + '+'
     if spisok_koef[i] == 0:
@@ -33,9 +33,9 @@ for i in range(len(spisok_koef)):
         continue
     else:
         if k_stepen-i == 1:
-            polynomial = polynomial + str(spisok_koef[i]) +'*x'
+            polynomial = polynomial + str(spisok_koef[i]) + '*x'
             continue
-    
+
     # if spisok_koef[i] == 1 and k_stepen-i>0:
     #     polynomial = polynomial + '*x^' + str(k_stepen-i)
     #     continue

@@ -7,16 +7,17 @@ def pi_accuracy():
     pi = 3
     k = 2
     b = True
-    # чем больше итераций в цикле тем точнее пи
+    # чем больше итераций в цикле тем точнее пи, можно передавать значение точности
     for i in range(1, 100000):
         if b:
-            pi = pi+4/(k*(k+1)*(k+2))
+            pi = pi + 4 / (k * (k + 1) * (k + 2))
             b = False
         else:
-            pi = pi-4/(k*(k+1)*(k+2))
+            pi = pi - 4 / (k * (k + 1) * (k + 2))
             b = True
         k += 2
     return pi
+
 
 d = float(input(
     'Введите точность с которой необходимо вычислить число пи (0.1 ... 0.01 и т.д.) : '))
@@ -24,10 +25,10 @@ d = float(input(
 # вычисление количества знаков после запятой(точность)
 if (d <= 0.1) and (d >= pow(10, -10)):
     accuracy = 1
-    while ((d*10) < 1):
-        d = d*10
+    while ((d * 10) < 1):
+        d = d * 10
         accuracy += 1
-    print(round(pi_accuracy(),accuracy))
+    print(round(pi_accuracy(), accuracy))
 else:
     print('Введено неверное значение точности!')
 

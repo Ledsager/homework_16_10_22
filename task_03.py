@@ -10,16 +10,15 @@ def input_mas():
 print('Введите массив переменных : ')
 list_a = input_mas()
 # первый вариант. Неповторяющиеся элементы.
-single_element_list_a=[]
+single_element_list_a = []
 for i in range(len(list_a)):
     if (list_a.count(list_a[i]) == 1):
         single_element_list_a.append(list_a[i])
-print('Неповторяющиеся элементы: ',single_element_list_a)
+print('Неповторяющиеся элементы: ', single_element_list_a)
 
 # второй вариант. Выводит элементы по 1 разу.
-single_element_list_a=[list_a[0]]
+single_element_list_a = [list_a[0]]
 for i in range(len(list_a)):
-     if (list_a[i] not in single_element_list_a) :
+    if (list_a[i] not in single_element_list_a):
         single_element_list_a.append(list_a[i])
-print('Массив без повторяющихся элементов: ',single_element_list_a)
-
+print('Массив без повторяющихся элементов: ', single_element_list_a)
