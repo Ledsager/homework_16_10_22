@@ -31,20 +31,20 @@ for i in range(len(spisok_koef)):
     if spisok_koef[i] == 0:
         continue
     if k_stepen-i == 1 and spisok_koef[i] > 1:
-        polynomial = polynomial + str(spisok_koef[i]) + 'x'
+        polynomial = polynomial + str(spisok_koef[i]) + '*x'
         continue
     else:
         if k_stepen-i == 1:
-            polynomial = polynomial + 'x'
+            polynomial = polynomial + str(spisok_koef[i]) +'*x'
             continue
     
-    if spisok_koef[i] == 1 and k_stepen-i>0:
-        polynomial = polynomial + 'x^' + str(k_stepen-i)
-        continue
+    # if spisok_koef[i] == 1 and k_stepen-i>0:
+    #     polynomial = polynomial + '*x^' + str(k_stepen-i)
+    #     continue
 
-    polynomial = polynomial + str(spisok_koef[i]) + 'x^' + str(k_stepen-i)
+    polynomial = polynomial + str(spisok_koef[i]) + '*x^' + str(k_stepen-i)
 if spisok_koef[-1] != 0:
-    polynomial = polynomial[:len(polynomial)-3]
+    polynomial = polynomial[:len(polynomial)-4]
 polynomial = polynomial + '=0'
 
 print('Полученный многочлен : ', polynomial)
